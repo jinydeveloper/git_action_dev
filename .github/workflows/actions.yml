@@ -1,0 +1,25 @@
+name: PHP CI
+
+on: [push]
+  # push:
+  #   branches: [ main ]
+  # pull_request:
+  #   branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    # strategy:
+    #   matrix:
+    #     php-versions: ['8.1', '8.2']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run pwd
+        run: pwd
+
+      - name: ✅ Run ls -al
+        run: ls -al
